@@ -1,3 +1,4 @@
+// models/book.js
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
@@ -7,31 +8,14 @@ const Book = sequelize.define('Book', {
     allowNull: false,
   },
   isbn: {
-    type: DataTypes.STRING,
-    allowNull: false,
-    unique: true,
+    type: DataTypes.STRING, // Можете сделать тип STRING, необязательным
   },
-  pageCount: {
-    type: DataTypes.INTEGER,
-  },
-  publishedDate: {
-    type: DataTypes.DATE,
-  },
-  thumbnailUrl: {
-    type: DataTypes.STRING,
-  },
-  shortDescription: {
-    type: DataTypes.TEXT,
-  },
-  longDescription: {
-    type: DataTypes.TEXT,
-  },
-  status: {
-    type: DataTypes.STRING,
-  },
-  categories: {
-    type: DataTypes.JSON,
-  },
+  pageCount: DataTypes.INTEGER,
+  publishedDate: DataTypes.DATE,
+  thumbnailUrl: DataTypes.STRING,
+  shortDescription: DataTypes.TEXT,
+  longDescription: DataTypes.TEXT,
+  status: DataTypes.STRING,
 });
 
 module.exports = Book;

@@ -1,12 +1,12 @@
-// models/author.js
+
 const { DataTypes } = require('sequelize');
 const sequelize = require('../config/database');
 
-const Author = sequelize.define('Author', {
+const Category = sequelize.define('Category', {
   name: {
     type: DataTypes.STRING,
     allowNull: false,
   },
 });
 
-module.exports = Author;
+module.exports = Category;
